@@ -8,19 +8,19 @@ pipeline {
 			git branch:'main', url: 'https://github.com/huudqtmu/projectnet.git'
 		}
 	} // end clone
-
-  } // end stages
-  stage ('build') {
+ // end stages
+    stage ('build') {
 		steps {
 			echo 'build project netcore'
 			bat 'dotnet build  --configuration Release'
 		}
 	}
-stage ('tests') {
-		steps{
-			echo 'running test...'
-			bat 'dotnet test --no-build --verbosity normal'
-		}
-	}
+    stage ('tests') {
+            steps{
+                echo 'running test...'
+                bat 'dotnet test --no-build --verbosity normal'
+            }
+        }
+ }
 
 }//end pipeline
