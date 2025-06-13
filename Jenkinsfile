@@ -9,13 +9,13 @@ pipeline {
 		}
 	} // end clone
  // end stages
-    stage ('build') {
+    stage('build') {
 		steps {
 			echo 'build project netcore'
 			bat 'dotnet build  --configuration Release'
 		}
 	}
-    stage ('tests') {
+    stage('tests') {
             steps{
                 echo 'running test...'
                 bat 'dotnet test --no-build --verbosity normal'
