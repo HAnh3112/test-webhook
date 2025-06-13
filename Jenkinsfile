@@ -5,7 +5,7 @@ pipeline {
 	stage('clone'){
 		steps {
 			echo 'Cloning source code'
-			git branch:'main', url: 'https://github.com/HAnh3112/test-webhook.git'
+			git branch:'main', url: 'https://github.com/HAnh3112/test-webhook'
 		}
 	}
     stage('build') {
